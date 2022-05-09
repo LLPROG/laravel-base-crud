@@ -6,7 +6,13 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            tutte le card dei comics
+            <ul>
+                @foreach ($data as $cardTitle)
+                    <li>
+                        <a href="{{ Route('Comics.show', $cardTitle->id) }}">{{ $cardTitle->title }}</a>
+                    </li>
+                @endforeach
+            </ul>
         </div>
     </div>
 </div>

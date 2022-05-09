@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            home <a href="{{ Route('Comics.index') }}"> route comics.index</a>
+            home <a href="{{ Route('Comics.index') }}"> route index</a>
         </div>
     </div>
 </div>

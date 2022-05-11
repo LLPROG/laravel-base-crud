@@ -9,7 +9,7 @@
             <ul>
                 @foreach ($comics as $comic)
                     <li>
-                        <a href="{{ Route('Comics.show', $comic->id) }}">{{ $comic->title }}</a>
+                        <a href="{{ route('comics.show', $comic->id) }}">{{ $comic->title }}</a>
                     </li>
                 @endforeach
             </ul>

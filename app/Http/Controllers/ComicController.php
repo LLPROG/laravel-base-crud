@@ -23,7 +23,7 @@ class ComicController extends Controller
         //     'comics' => $comics,
         // ];
 
-        return view('comics.index', compact('comics'));
+        return view('Comics.index', compact('comics'));
     }
 
     /**
@@ -44,7 +44,7 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request->all());
 
     }
 
@@ -56,10 +56,10 @@ class ComicController extends Controller
      */
     public function show(Comic $comic)
     {
-        // pagina di dettagli con una sola risorsa
-        return view('Comics.show', [
+
+        return view('/Comics.show', [
             'comic' => $comic,
-            'pageTitle' => $comic->title,
+            'pageTitle' => $comic->title
         ]);
     }
 

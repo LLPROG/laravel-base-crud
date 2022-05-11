@@ -17,7 +17,7 @@
 
         <div class="row">
             <div class="col">
-                <a href="{{ Route('Comics.create') }}">create comic</a>
+                <a href="{{ route('comics.create') }}">create comic</a>
             </div>
         </div>
     </div>

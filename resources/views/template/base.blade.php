@@ -8,6 +8,10 @@
     <title>@yield('title')</title>
 </head>
 <body>
+
+    @include('partial/header')
+
     @yield('content')
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

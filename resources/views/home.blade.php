@@ -1,6 +1,6 @@
 @extends('template.base')
 
-@section('title', 'titolo')
+@section('title', 'comic home')
 
 @section('content')
 <div class="container">

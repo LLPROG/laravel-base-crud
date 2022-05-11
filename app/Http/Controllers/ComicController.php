@@ -16,14 +16,14 @@ class ComicController extends Controller
     public function index()
     {
         // $comics = Comic::paginate(15);
-        $comics = Comic::paginate(15);
+        $comics = Comic::paginate(5);
 
         // dd($comics);
-        $data = [
-            'data' => $comics,
-        ];
+        // $data = [
+        //     'comics' => $comics,
+        // ];
 
-        return view('comics.index', $data);
+        return view('comics.index', compact('comics'));
     }
 
     /**
@@ -33,7 +33,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-
+        return view('comics.create');
     }
 
     /**
@@ -57,10 +57,9 @@ class ComicController extends Controller
     public function show(Comic $comic)
     {
         // pagina di dettagli con una sola risorsa
-        $comics = Comic::find($comic);
-        return view('comics.show', [
+        return view('Comics.show', [
             'comic' => $comic,
-            'title' => $comic->title
+            'pageTitle' => $comic->title,
         ]);
     }
 

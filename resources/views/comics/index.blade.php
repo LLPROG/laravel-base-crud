@@ -7,12 +7,14 @@
     <div class="row">
         <div class="col">
             <ul>
-                @foreach ($data as $cardTitle)
+                @foreach ($comics as $comic)
                     <li>
-                        <a href="{{ Route('Comics.show', $cardTitle->id) }}">{{ $cardTitle->title }}</a>
+                        <a href="{{ Route('Comics.show', $comic->id) }}">{{ $comic->title }}</a>
                     </li>
                 @endforeach
             </ul>
+
+            {{ $comics->links() }}
         </div>
     </div>
 </div>

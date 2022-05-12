@@ -129,16 +129,16 @@ class ComicSeeder extends Seeder
             $comicData = [
                 'title'                 => $comic['title'],
                 'description'           => $comic['description'],
-               'thumb'                  => $comic['thumb'],
+                'thumb'                 => $comic['thumb'],
                 'price'                 => $comic['price'],
                 'series'                => $comic['series'],
                 'sale_date'             => $comic['sale_date'],
                 'type'                  => $comic['type'],
             ];
 
-            $train = new Comic();
-            $train->fill($comicData);
-            $train->save();
+            $comicTable = new Comic();
+            $comicTable->fill($comicData);
+            $comicTable->save();
         }
     }
 }

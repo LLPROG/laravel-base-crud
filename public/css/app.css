@@ -12173,3 +12173,25 @@ fieldset:disabled .btn {
   }
 }
 
+.card {
+  height: 45rem;
+}
+
+.card h1,
+.card .h1 {
+  padding: 2rem 0;
+  height: 12rem;
+}
+
+.card img {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+

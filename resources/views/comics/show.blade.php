@@ -9,8 +9,12 @@
                 <h1>
                     {{ $comic->title }}
                 </h1>
+                <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
                 <p>
                     {{ $comic->description }}
+                </p>
+                <p>
+                    Price: {{ $comic->price }} euro
                 </p>
             </div>
         </div>

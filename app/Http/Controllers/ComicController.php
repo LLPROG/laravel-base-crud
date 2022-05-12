@@ -16,14 +16,14 @@ class ComicController extends Controller
     public function index()
     {
         // $comics = Comic::paginate(15);
-        $comics = Comic::paginate(5);
+        $comics = Comic::paginate(8);
 
         // dd($comics);
         // $data = [
         //     'comics' => $comics,
         // ];
 
-        return view('Comics.index', compact('comics'));
+        return view('comics.index', compact('comics'));
     }
 
     /**
@@ -44,7 +44,14 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        $comicData = $request->all();
+
+
+        $comicTable = new Comic();
+        $comicTable->fill($comicData);
+        $result = $comicTable->save();
+
+        return redirect()->route('comics.index');
 
     }
 
@@ -57,7 +64,7 @@ class ComicController extends Controller
     public function show(Comic $comic)
     {
 
-        return view('/Comics.show', [
+        return view('comics.show', [
             'comic' => $comic,
             'pageTitle' => $comic->title
         ]);

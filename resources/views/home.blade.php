@@ -6,7 +6,9 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            home
+            <h1 class="text-center">
+                Home
+            </h1>
         </div>
     </div>
 </div>

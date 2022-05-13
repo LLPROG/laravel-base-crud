@@ -21,8 +21,28 @@
 
         <div class="row">
             <div class="col">
-                <a href="{{ route('comics.create') }}">create comic</a>
+                <a href="{{ route('comics.edit', $comic->id) }}">Modify this Comic</a>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col">
+                <a href="{{  url()->previous() }}"> Back </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <form method="POST" action="{{  route('comics.destroy', $comic->id) }}" >
+                    @csrf
+                    @method('DELETE')
+                    <button>
+                        Delete
+                    </button>
+                </form>
+            </div>
+        </div>
+
+
     </div>
 @endsection

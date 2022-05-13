@@ -12179,8 +12179,9 @@ fieldset:disabled .btn {
 
 .card h1,
 .card .h1 {
+  text-align: center;
   padding: 2rem 0;
-  height: 12rem;
+  height: 15rem;
 }
 
 .card img {
